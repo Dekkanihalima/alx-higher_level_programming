@@ -40,9 +40,7 @@ def matrix_mul(m_a, m_b):
         raise TypeError("m_b should contain only integers or floats")
 
     if not all(len(row) == len(m_a[0]) for row in m_a):
-        raise ValueError("each row of m_a must have the same size")
-    if not all(len(row) == len(m_b[0]) for row in m_b):
-        raise ValueError("each row of m_a must have the same size")
+        raise ValueError("each row of m_a must be the same size")
 
     if not all(len(row) == len(m_a[0]) for row in m_a):
         raise TypeError("each row of m_a must should be of the same size")

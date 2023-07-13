@@ -1,9 +1,14 @@
 #!/usr/bin/python3
+"""
+read-file print the file content
+
+   
+"""
 def read_file(filename=""):
-    """ read-file print the file content
+    """ 
     Args:
         filename (path): file path
 
     """
-    with open(filename, encoding="utf-8") as f:
-        print(f.read(), end="")
+    with open(filename, 'r',encoding='utf-8') as f:
+        print(f.read(), end='')

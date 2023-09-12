@@ -1,23 +1,24 @@
 #!/usr/bin/python3
-""" My class module
+"""
+Student
+Class
 """
 
-class MyClass:
-    """ My class
-    """
 
-    score = 0
+class Student:
 
-    def __init__(self, name, number = 4):
-        self.__name = name
-        self.number = number
-        self.is_team_red = (self.number % 2) == 0
+    def __init__(self, first_name, last_name, age):
+        """Constructor"""
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
 
-    def win(self):
-        self.score += 1
-
-    def lose(self):
-        self.score -= 1
-
-    def __str__(self):
-        return "[MyClass] {} - {:d} => {:d}".format(self.__name, self.number, self.score)
+    def to_json(self, attrs=None):
+        """
+        Public method Retrieves a dictionary representation of a
+        Student instance
+        """
+        if (isinstance(attrs, list) and
+                all(isinstance(x, str) for x in attrs)):
+            return {x: getattr(self, x) for x in attrs if hasattr(self, x)}
+        return self.__dict__

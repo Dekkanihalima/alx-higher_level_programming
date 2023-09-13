@@ -1,9 +1,16 @@
 #!/usr/bin/python3
 """
-create a functionthat returns a list of lists of integers representing the Pascal’s triangle of n:
+create a function that returns a list of lists of integers representing the Pascal’s triangle of n:
 """
+
+
 def pascal_triangle(n):
-    """ Pascal Triangle """
+    """
+    Pascal Triangle
+    Args:
+    n (int): number of lists and digits
+    Returns: list of lists
+    """
     li = []
     if n <= 0:
         return li

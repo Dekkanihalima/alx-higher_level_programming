@@ -23,3 +23,4 @@ def pascal_triangle(n):
             else:
                 li[r].append(li[r - 1][c] + li[r - 1][c - 1])
     return li
+
